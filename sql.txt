@@ -1,0 +1,73 @@
+
+create table if not exists student(
+  id int auto_increment,
+  code varchar(50),
+  name varchar(50),
+  gender varchar(2),
+  avatar varchar(50),
+  college varchar(50),
+  speciality varchar(50),
+  grade varchar(50),
+  status varchar(50),
+  tags varchar(50),
+  origo varchar(100),
+  view int,
+  hot int,
+  last int,
+  primary key(id)
+)default charset=gb2312;
+
+
+create table if not exists user(
+  id int auto_increment,
+  phone varchar(11),
+  password varchar(50),
+  student_id int,
+  primary key(id)
+)default charset=gb2312;
+
+insert into user(phone,password,student_id) values('15612340003','123456',3);
+insert into user(phone,password,student_id) values('15612340004','123456',4);
+insert into user(phone,password,student_id) values('15612340005','123456',5);
+insert into user(phone,password,student_id) values('15612340006','123456',6);
+
+
+
+create table if not exists news(
+  id int auto_increment,
+  title varchar(11),
+  content varchar(50),
+  img varchar(50),
+  date Date,
+  user varchar(50),
+  primary key(id)
+)default charset=gb2312;
+
+insert into news(title,content,date,user,img) values('非常帅气','12阿斯顿发撒发沙发上发呆发虽然过去无关3','2018-06-02','张三','img/default.jpg');
+insert into news(title,content,date,user,img) values('非常帅气','12阿斯顿发撒发沙发上发呆发虽然过去无关3','2018-06-03','张三','img/default.jpg');
+insert into news(title,content,date,user,img) values('非常帅气','12阿斯顿发撒发沙发上发呆发虽然过去无关3','2018-06-04','张三','img/default.jpg');
+insert into news(title,content,date,user,img) values('非常帅气','12阿斯顿发撒发沙发上发呆发虽然过去无关3','2018-06-05','张三','img/default.jpg');
+insert into news(title,content,date,user,img) values('非常帅气','12阿斯顿发撒发沙发上发呆发虽然过去无关3','2018-06-06','张三','img/default.jpg');
+
+
+
+
+
+
+create table if not exists comment(
+  id int auto_increment,
+  title varchar(11),
+  content varchar(50),
+  date Date,
+  user_id int,
+  good int,
+  bad int,
+  primary key(id)
+)default charset=gb2312;
+
+
+insert into comment(title,content,date,user_id,good,bad) values('非常帅气','12阿斯顿发撒发沙发上发呆发虽然过去无关3','2018-06-02',3,5,5);
+insert into comment(title,content,date,user_id,good,bad) values('非常帅气','12阿斯顿发撒发沙发上发呆发虽然过去无关3','2018-06-02',4,5,5);
+insert into comment(title,content,date,user_id,good,bad) values('非常帅气','12阿斯顿发撒发沙发上发呆发虽然过去无关3','2018-06-02',5,5,5);
+insert into comment(title,content,date,user_id,good,bad) values('非常帅气','12阿斯顿发撒发沙发上发呆发虽然过去无关3','2018-06-02',6,5,5);
+
