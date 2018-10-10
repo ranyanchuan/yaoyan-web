@@ -6,7 +6,7 @@ import { connect } from 'dva';
 import { Button, Input, Carousel, Form, Icon, Tabs, Badge, Divider } from 'antd';
 import styles from './index.less';
 
-class Star extends React.Component {
+class GraphQL extends React.Component {
 
   componentDidMount() {
     this.getStarData();
@@ -66,4 +66,4 @@ class Star extends React.Component {
   }
 }
 
-export default connect(({ User }) => ({ User }))(Star);
+export default connect(({ User }) => ({ User }))(GraphQL);
